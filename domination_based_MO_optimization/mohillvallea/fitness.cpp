@@ -77,7 +77,9 @@ void hicam::fitness_t::evaluate(solution_t & sol)
   define_problem_evaluation(sol);
   
   for(size_t i = 0; i < sol.obj.size(); ++i) {
+    //printf("objective %d \n", i);
     assert(!isnan(sol.obj[i]));
+    //printf("is equal to %f \n", sol.obj[i]);
   }
   
   number_of_evaluations++;
