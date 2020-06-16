@@ -14,8 +14,8 @@ hicam::fitness_t::fitness_t()
   sr_available = false;
   redefine_random_initialization = false;
   
-  hypervolume_max_f0 = 1.1;
-  hypervolume_max_f1 = 1.1;
+  hypervolume_max_f0 = 200;
+  hypervolume_max_f1 = 200;
   use_lex = false;
   partial_evaluations_available = false;
   analytical_gradient_available = false;
