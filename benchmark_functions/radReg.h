@@ -70,12 +70,13 @@ namespace hicam
       int K = (int) sol.param.size() / 3;
       
       //f0
+      
       double totalerror = 0;
       for (int point = 0; point < size ;point++) {
         double suberror = y[point];
         for (int radial = 0; radial < K; radial++){
           int index = 3 * radial;
-          suberror -= sol.param[index] * exp( (-1*(x[point]-sol.param[index+1])*(x[point]-sol.param[index+1])  )  / ( 2* sol.param[index+2] * sol.param[index+2] ) );
+          suberror -= sol.param[index] *  exp( (-1*(x[point]-sol.param[index+1])*(x[point]-sol.param[index+1])  )  / ( 2* sol.param[index+2] * sol.param[index+2] ) );
         }
         totalerror += suberror * suberror;// assumption: number is never complex (left out absolute around suberror)
       }
