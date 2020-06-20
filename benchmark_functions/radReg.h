@@ -25,6 +25,8 @@ namespace hicam
     {
       number_of_objectives = 2; //fixed
       number_of_parameters = 30; //w, mu, sigma , or defined in K?
+      hypervolume_max_f0 = 200;
+      hypervolume_max_f1 = 200;
     }
     ~radReg_t() {}
 
@@ -44,10 +46,10 @@ namespace hicam
     void get_param_bounds(vec_t & lower, vec_t & upper) const
     {
       lower.clear();
-      lower.resize(number_of_parameters, 0);
+      lower.resize(number_of_parameters, -50);
 
       upper.clear();
-      upper.resize(number_of_parameters, 20); //this should set the max value to 20?
+      upper.resize(number_of_parameters, 50); //this should set the max value to 20?
   
     }
 
