@@ -24,7 +24,7 @@ namespace hicam
 
 
    double rbf(solution_t &sol, double x, int i);
-   double f0(int n,double *x,  double *y, solution_t &sol, int K);
+   double f0(int n, solution_t &sol, int K);
    double RBF(solution_t &sol, double x, int K);
 
     radReg_t();
